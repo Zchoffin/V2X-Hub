@@ -10,7 +10,7 @@ sudo apt-get install chromium-browser -y      #Chrome required for CARMA platfor
 sudo apt install curl -y                      #Curl for downloading files over internet
 
 #install docker
-curl -L https://raw.githubusercontent.com/usdot-fhwa-stol/carma-platform/develop/engineering_tools/install-docker.sh | bash 
+sudo curl -L https://raw.githubusercontent.com/usdot-fhwa-stol/carma-platform/develop/engineering_tools/install-docker.sh | sudo bash 
 
 #make passwords for mysql
 mkdir -p secrets && cd secrets
@@ -48,7 +48,7 @@ sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-compose-plu
 sudo apt -y install python3-pip
 sudo pip3 install docker-compose
 sudo apt update -y && sudo apt upgrade -y
-sudo docker-compose up -d
+sudo /home/mic-730ai/.local/bin/docker-compose up -d
 
 #create v2xhub user
 cd $mysqlDir
